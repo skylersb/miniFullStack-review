@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="fullStack">
+<head>
+	<title>Fullest Stack</title>
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body ng-controller="MyController">
+
+
+
+<div ng-repeat="friend in friends">
+	name: {{friend.name}}, <br />
+	age: {{friend.age}}, <br />
+	yearMet: {{friend.yearMet}}
+	<hr>
+</div>
+
+<form ng-submit="addFriend()">
+<input ng-model="friend.name" placeholder="Name">
+<input ng-model="friend.age" placeholder="Age">
+<input ng-model="friend.yearMet" placeholder="Year Met">
+<button>Add Friend</button>
+</form>
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+<!-- FOLDER FILES -->
+<script src="js/app.js"></script>
+<script src="js/myController.js"></script>
+<script src="js/myService.js"></script>
+</body>
+</html>
